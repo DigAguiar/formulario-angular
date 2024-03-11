@@ -1,9 +1,26 @@
 <header>
+    <!-- <nav>
 
-    <a routerLink="add-aluno">add aluno </a>
+        <a routerLink="add-aluno">add aluno </a>
+        
 
+    </nav> -->
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="home" routerLink="aluno">Home</a>
+          
 
-    <span>Alunos {{getQuantidadeAlunos()}} </span>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <span>Alunos: {{getQuantidadeAlunos()}} </span>
+              
+            <div class="plus__sign">
+                <a routerLink="add-aluno" > <i class="fa-solid fa-plus"></i></a>
+            </div>
 
+            </div>
+        </div>
+        
+      </nav>
 
 </header>

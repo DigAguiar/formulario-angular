@@ -1,0 +1,17 @@
+.home {
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    font-weight: bold;
+}
+
+div {
+    margin-left: 20px;
+}
+
+.plus__sign{
+    font-size: 30px;
+    border: 10px;
+    background-color: white;
+    margin-left: 10px;
+}
