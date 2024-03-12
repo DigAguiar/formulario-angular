@@ -1,2 +1,19 @@
-<p>get-aluno works!</p>
+<h2>Tabela de alunos</h2>
 
+<ul>
+    <li *ngFor="let aluno of listaAlunos">
+        <a routerLink="/get-alunos/{{aluno.id}}" class="nome-aluno"> {{aluno.nome}} </a>
+        
+        <span class="nota-aluno"> {{aluno.nota1}} </span>
+        <span class="nota-aluno"> {{aluno.nota2}} </span>
+        <span class="media-aluno"> {{aluno.media}} </span>
+
+        <span *ngIf="aluno.media >= 7 " class="mensagem-aprovado"> Aprovado </span>
+        <span *ngIf="aluno.media < 7 " class="mensagem-reprovado"> Reprovado </span>
+        <button (click)="apagarAluno(aluno.id)">Apagar</button>
+
+    </li>
+
+
+
+</ul>

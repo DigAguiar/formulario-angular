@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddAlunoComponent } from './add-aluno/add-aluno.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'aluno', pathMatch: 'full'},
-  { path: 'aluno', loadChildren: () => import('./get-aluno/get-aluno.module').then(m => m.GetAlunoModule) },
+  { path: '', redirectTo: 'get-alunos', pathMatch: 'full'},
+  { path: 'get-alunos', loadChildren: () => import('./get-aluno/get-aluno.module').then(m => m.GetAlunoModule) },
   { path: 'add-aluno', component: AddAlunoComponent },
 
 ];

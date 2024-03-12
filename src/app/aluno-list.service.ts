@@ -14,6 +14,10 @@ export class AlunoListService {
     return this.listaAlunosExistentes;
   }
 
+  getAlunoById(idAluno: number) : IAluno | any {
+    return this.listaAlunosExistentes.find(aluno => aluno.id === idAluno);
+  }
+
   addAluno(id:number,nome: string, nota1: number, nota2: number) {
     const aluno = {id,nome, nota1, nota2};
     this.listaAlunosExistentes.push(aluno);
@@ -26,6 +30,7 @@ export class AlunoListService {
   alunosQuantidade () {
     return this.listaAlunosExistentes.length;
   }
+
 
 
 }

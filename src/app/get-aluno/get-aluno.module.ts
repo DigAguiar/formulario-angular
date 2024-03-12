@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { GetAlunoRoutingModule } from './get-aluno-routing.module';
 import { GetAlunoComponent } from './get-aluno.component';
 import { DetalheAlunoComponent } from './detalhe-aluno/detalhe-aluno.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { DetalheAlunoComponent } from './detalhe-aluno/detalhe-aluno.component';
   ],
   imports: [
     CommonModule,
-    GetAlunoRoutingModule
+    GetAlunoRoutingModule,
+    FormsModule
   ]
 })
 export class GetAlunoModule { }
