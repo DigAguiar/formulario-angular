@@ -7,7 +7,7 @@ import { AlunoListService } from '../aluno-list.service';
   styleUrl: './add-aluno.component.css'
 })
 export class AddAlunoComponent {
-
+  id = 2;
   nome = "";
   nota1 = "";
   nota2 = "";
@@ -17,7 +17,8 @@ export class AddAlunoComponent {
   ) { }
 
   adicionarAluno(nome: string, nota1: string, nota2: string) {
-    this.alunoService.addAluno(nome, Number(nota1), Number(nota2));
+    this.id++;
+    this.alunoService.addAluno(this.id,nome, Number(nota1), Number(nota2));
 
     this.nome = "";
     this.nota1 = "";

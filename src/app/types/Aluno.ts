@@ -4,6 +4,7 @@ function media ( nota1: number, nota2: number): number {
 }
 
 export interface IAluno {
+    id : number;
     nome: string;
     nota1: number;
     nota2: number;
@@ -12,8 +13,8 @@ export interface IAluno {
 
 
 export const listaAlunos: IAluno[] = [
-    {nome: "joao",nota1: 5,nota2: 4,media: media},
-    {nome: "maria",nota1: 8,nota2: 9,media: media},
+    {id: 1,nome: "joao",nota1: 5,nota2: 4,media: media},
+    {id: 2,nome: "maria",nota1: 8,nota2: 9,media: media},
 ]
     
 

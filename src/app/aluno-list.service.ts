@@ -14,8 +14,8 @@ export class AlunoListService {
     return this.listaAlunosExistentes;
   }
 
-  addAluno(nome: string, nota1: number, nota2: number) {
-    const aluno = {nome, nota1, nota2};
+  addAluno(id:number,nome: string, nota1: number, nota2: number) {
+    const aluno = {id,nome, nota1, nota2};
     this.listaAlunosExistentes.push(aluno);
   }
 
