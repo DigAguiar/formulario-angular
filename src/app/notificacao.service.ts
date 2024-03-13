@@ -14,7 +14,7 @@ export class NotificacaoService {
     this.snackBar.open(message, "OK" ,{
       duration: 2000,
       verticalPosition: 'top',
-      horizontalPosition: 'center'
+      horizontalPosition: 'center',
     });
 
   }

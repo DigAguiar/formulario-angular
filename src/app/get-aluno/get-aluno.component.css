@@ -1,7 +1,48 @@
-.nome-aluno{
+.nome-aluno {
     font-size: 20px;
     font-weight: bold;
     color: #000;
     margin-bottom: 10px;
+
+}
+
+.lista-alunos {
+    /* Propriedades gerais da lista */
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    border: 1px solid #333;
+    border-radius: 20px;
+    text-align: center;
+    width: 900px;
     
 }
+
+.nome-aluno {
+    text-decoration: none;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+
+.aluno:hover {
+    background-color: #f5f5f5;
+}
+
+.nome {
+    /* Estilo para a classe "nome" */
+    
+  }
+
+
+  .nota {
+    /* Estilo para a classe "nota" */
+    font-size: 18px;
+    color: #333;
+  }
+  li{
+    display: flex;
+  }

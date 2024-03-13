@@ -2,17 +2,19 @@
 
 <ul>
     <li *ngFor="let aluno of listaAlunos">
-        <a routerLink="/get-alunos/{{aluno.id}}" class="nome-aluno"> {{aluno.nome}} </a>
-        
-        <span class="nota-aluno"> {{aluno.nota1}} </span>
-        <span class="nota-aluno"> {{aluno.nota2}} </span>
-        <span class="media-aluno"> {{aluno.media}} </span>
+        <div class="lista-alunos">
+            <a routerLink="/get-alunos/{{aluno.id}}" class="nome-aluno"> {{aluno.nome}} </a>
 
-        <span *ngIf="aluno.media >= 7 " class="mensagem-aprovado"> Aprovado </span>
-        <span *ngIf="aluno.media < 7 " class="mensagem-reprovado"> Reprovado </span>
-        <button (click)="apagarAluno(aluno.id)">Apagar</button>
+            <span class="nota"> {{aluno.nota1}} </span>
+            <span class="nota"> {{aluno.nota2}} </span>
+            <span class="nota"> {{aluno.media}} </span>
+
+            <span *ngIf="aluno.media >= 7 " class="mensagem-aprovado"> Aprovado </span>
+            <span *ngIf="aluno.media < 7 " class="mensagem-reprovado"> Reprovado </span>
         
-    </li>
+            <button (click)="apagarAluno(aluno.id)">Apagar</button>
+            </div>
+        </li>
 
 
 

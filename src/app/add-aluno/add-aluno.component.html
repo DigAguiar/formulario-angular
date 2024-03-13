@@ -1,20 +1,17 @@
-
 <h2>Adicionar aluno</h2>
 
-<div>
-    <label for="Aluno"> Nome do aluno: </label>
-    <input type="text" [(ngModel)]="nome">
+<div class="container">
+
+    <input matInput placeholder="Nome" [(ngModel)]="nome">
 
     <br>
 
-    <label for="Nota 1">Nota 1: </label>
-    <input type="number" [(ngModel)]="nota1">
+    <input placeholder="Nota 1" type="number" [(ngModel)]="nota1">
 
     <br>
-
-    <label for="Nota 2">Nota 2: </label>
-    <input type="number" [(ngModel)]="nota2">
-
+    
+    <input placeholder="Nota 2" type="number" [(ngModel)]="nota2">
+    
     <br>
 
     <button type="submit" (click)="adicionarAluno(nome,nota1,nota2)">Enviar</button>

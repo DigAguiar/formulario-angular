@@ -27,8 +27,15 @@ export class AlunoListService {
     this.notificacaoService.notificar('Aluno adicionado com sucesso');
   }
 
-  deleteAluno(index: number) {
+  deleteAluno(idAluno: number) {
+    let index = this.listaAlunosExistentes.findIndex(aluno => aluno.id === idAluno);
+    if(index === null) {
+      this.notificacaoService.notificar('Aluno não encontrado');
+      return;
+     }
+    this.notificacaoService.notificar('Aluno removido com sucesso');
     this.listaAlunosExistentes.splice(index, 1);
+
   }
 
   alunosQuantidade () {

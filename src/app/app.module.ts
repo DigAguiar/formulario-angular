@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { AddAlunoComponent } from './add-aluno/add-aluno.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatFormField
   ],
   providers: [
     provideClientHydration(),
