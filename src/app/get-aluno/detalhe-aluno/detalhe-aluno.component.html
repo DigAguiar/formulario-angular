@@ -1,7 +1,12 @@
 <p>detalhe-aluno works!</p>
 
 
-<span > {{alunoDetalhes.nome}} </span>
-<span> {{alunoDetalhes.nota1}} </span>
-<span> {{alunoDetalhes.nota2}} </span>
-<span> {{alunoDetalhes.media}} </span>
+<input class="" type="text" [(ngModel)]="alunoDetalhes.nome">
+
+<input type="number" [(ngModel)]="alunoDetalhes.nota1">
+
+<input type="number" [(ngModel)]="alunoDetalhes.nota2">
+
+
+
+<button (click)="editarAluno()">Editar </button>

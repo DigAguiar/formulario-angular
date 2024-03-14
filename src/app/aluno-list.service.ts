@@ -22,7 +22,8 @@ export class AlunoListService {
   }
 
   addAluno(id:number,nome: string, nota1: number, nota2: number) {
-    const aluno = {id,nome, nota1, nota2};
+    let media = (nota1 + nota2) / 2;
+    let aluno = {id,nome, nota1, nota2,media};
     this.listaAlunosExistentes.push(aluno);
     this.notificacaoService.notificar('Aluno adicionado com sucesso');
   }
@@ -40,6 +41,14 @@ export class AlunoListService {
 
   alunosQuantidade () {
     return this.listaAlunosExistentes.length;
+  }
+
+  editarAluno (id:number,nome: string, nota1: number, nota2: number) {
+    let media = (nota1 + nota2) / 2;
+    let aluno = {id,nome, nota1, nota2,media};
+    let index = this.listaAlunosExistentes.findIndex(aluno => aluno.id === id);
+    this.listaAlunosExistentes[index] = aluno;
+    this.notificacaoService.notificar('Aluno editado com sucesso');
   }
 
 

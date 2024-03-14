@@ -5,9 +5,9 @@
         <div class="lista-alunos">
             <a routerLink="/get-alunos/{{aluno.id}}" class="nome-aluno"> {{aluno.nome}} </a>
 
-            <span class="nota"> {{aluno.nota1}} </span>
-            <span class="nota"> {{aluno.nota2}} </span>
-            <span class="nota"> {{aluno.media}} </span>
+            <span class="nota">Nota 1 => {{aluno.nota1}} /</span>
+            <span class="nota">Nota 2 => {{aluno.nota2}} /</span>
+            <span class="nota">Média => {{aluno.media}} /</span>
 
             <span *ngIf="aluno.media >= 7 " class="mensagem-aprovado"> Aprovado </span>
             <span *ngIf="aluno.media < 7 " class="mensagem-reprovado"> Reprovado </span>

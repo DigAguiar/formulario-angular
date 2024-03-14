@@ -11,7 +11,7 @@ import { IAluno } from '../../types/Aluno';
 export class DetalheAlunoComponent implements OnInit{
 
   alunoDetalhes : IAluno | any;
-  id : number = 0;
+  id: number | any;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -21,6 +21,11 @@ export class DetalheAlunoComponent implements OnInit{
   ngOnInit(): void {
     this.id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     this.alunoDetalhes = this.alunoService.getAlunoById(this.id);
+  }
+
+  editarAluno() {
+    this.alunoService.editarAluno(this.id, this.alunoDetalhes.nome, this.alunoDetalhes.nota1, this.alunoDetalhes.nota2);
+
   }
 
 
