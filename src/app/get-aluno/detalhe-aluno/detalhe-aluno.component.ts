@@ -10,6 +10,10 @@ import { IAluno } from '../../types/Aluno';
 })
 export class DetalheAlunoComponent implements OnInit{
 
+  nomeAluno : string | any;
+  nota1Aluno :number | any
+  nota2Alunos : number | any;
+
   alunoDetalhes : IAluno | any;
   id: number | any;
 
@@ -21,10 +25,13 @@ export class DetalheAlunoComponent implements OnInit{
   ngOnInit(): void {
     this.id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     this.alunoDetalhes = this.alunoService.getAlunoById(this.id);
+    this.nomeAluno = this.alunoDetalhes.nome;
+    this.nota1Aluno = this.alunoDetalhes.nota1;
+    this.nota2Alunos = this.alunoDetalhes.nota2;
   }
 
   editarAluno() {
-    this.alunoService.editarAluno(this.id, this.alunoDetalhes.nome, this.alunoDetalhes.nota1, this.alunoDetalhes.nota2);
+    this.alunoService.editarAluno(this.id, this.nomeAluno, this.nota1Aluno, this.nota2Alunos);
 
   }
 
